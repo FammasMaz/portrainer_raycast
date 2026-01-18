@@ -4,8 +4,11 @@
   "title": "Portainer",
   "description": "Manage Docker containers, stacks, images, volumes, and networks via Portainer",
   "icon": "command-icon.png",
-  "author": "fammasmaz",
-  "categories": ["Developer Tools", "System"],
+  "author": "FammasMaz",
+  "categories": [
+    "Developer Tools",
+    "System"
+  ],
   "license": "MIT",
   "commands": [
     {
