@@ -12,7 +12,7 @@ type ExtensionPreferences = {
   "portainerUrl": string,
   /** API Key - Your Portainer API access token */
   "apiKey": string,
-  /** Default Environment ID - ID of the default Portainer environment to use (defaults to 1) */
+  /** Default Environment ID - ID of the default Portainer environment (auto-detected if empty) */
   "defaultEndpointId": string
 }
 

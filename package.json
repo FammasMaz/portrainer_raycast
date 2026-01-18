@@ -68,8 +68,8 @@
       "type": "textfield",
       "required": false,
       "title": "Default Environment ID",
-      "description": "ID of the default Portainer environment to use (defaults to 1)",
-      "default": "1"
+      "description": "ID of the default Portainer environment (auto-detected if empty)",
+      "default": ""
     }
   ],
   "dependencies": {
