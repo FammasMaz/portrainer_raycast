@@ -69,7 +69,18 @@ function ContainerListItem({
   const state = container.State as ContainerState;
   const isRunning = isContainerRunning(container);
 
-  const accessories: List.Item.Accessory[] = [
+  const ports = formatPorts(container.Ports);
+  const accessories: List.Item.Accessory[] = [];
+
+  // Add ports if there are exposed ports
+  if (ports !== "No ports" && ports !== "No exposed ports") {
+    accessories.push({
+      icon: Icon.Globe,
+      text: ports,
+    });
+  }
+
+  accessories.push(
     {
       tag: {
         value: state,
@@ -79,7 +90,7 @@ function ContainerListItem({
     {
       text: formatRelativeTime(container.Created),
     },
-  ];
+  );
 
   const handleStart = async () => {
     const toast = await showToast({
